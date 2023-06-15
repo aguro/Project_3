@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: #eff2fa;
+  margin: auto;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background: #eff2fa;
+  background-image: url('../src/assets/Polygon Luminary.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  margin-top: 3rem;
+}
+
+.modal {
+  color: black;
+}
+
+button {
+  width: 100px;
+}

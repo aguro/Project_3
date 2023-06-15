@@ -1,0 +1,27 @@
+th {
+  background: rgba(255, 255, 255, 0.04);
+  color: white;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.2);
+  color: white
+}
+
+btn {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#action-buttons {
+  background: transparent;
+  border-color: transparent;
+  width: 240px;
+
+  button {
+    width: 100px;
+  }
+}
+
+.custom-button {
+  width: 150px;
+}

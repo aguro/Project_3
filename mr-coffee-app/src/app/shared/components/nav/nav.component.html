@@ -1,0 +1,11 @@
+<nav>
+  <div class="container">
+    <div class="nav nav-tabs justify-content-end" id="nav-tab" role="tablist">
+      <a class="nav__item nav-link" [ngClass]="{'active': isActive('/schedule')}" routerLink="/schedule" role="tab" aria-controls="nav-home" aria-selected="true">Schedule</a>
+      <a class="nav__item nav-link" *ngIf="!isUserLoggedIn" [ngClass]="{'active': isActive('/signup')}" routerLink="/signup" role="tab" aria-controls="nav-profile" aria-selected="false">Signup</a>
+      <a class="nav__item nav-link" *ngIf="!isUserLoggedIn" [ngClass]="{'active': isActive('/login')}" routerLink="/login" role="tab" aria-controls="nav-contact" aria-selected="false">Login</a>
+      <a class="nav__item nav-link" *ngIf="isUserLoggedIn" [ngClass]="{'active': isActive('/user/' + getUserId())}" [routerLink]="'/user/' + getUserId()" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+      <a class="nav__item nav-link" *ngIf="isUserLoggedIn" [ngClass]="{'active': isActive('/logout')}"  (click)="logout()">Logout</a>
+    </div>
+  </div>
+</nav>

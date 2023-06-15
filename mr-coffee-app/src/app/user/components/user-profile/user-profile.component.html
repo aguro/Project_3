@@ -1,0 +1,29 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>User profile</h2>
+        <p>Firstname: <span>{{ user?.firstname }}</span></p>
+        <p>Lastname: <span>{{ user?.lastname }}</span></p>
+        <button type="button" class="mb-4 btn btn-secondary custom-button" data-bs-toggle="modal"
+          [attr.data-bs-target]="'#editUserData'">
+          Edit data
+        </button>
+        <app-edit-user-modal *ngIf="user" [user]="user"></app-edit-user-modal>
+        <h2>Password</h2>
+        <button type="button" class="mb-4 btn btn-secondary custom-button" data-bs-toggle="modal"
+          [attr.data-bs-target]="'#editUserPassword'">
+          Change password
+        </button>
+        <app-edit-password-modal *ngIf="user" [user]="user"></app-edit-password-modal>
+        <h2>Delete account</h2>
+        <button type="button" class="mb-4 btn btn-secondary custom-button" data-bs-toggle="modal"
+          [attr.data-bs-target]="'#deleteModal'">
+          Confirm
+        </button>
+        <app-delete-user-modal *ngIf="user" [user]="user"
+        [modalId]="'deleteModal'"></app-delete-user-modal>
+      </div>
+    </div>
+  </div>
+</main>

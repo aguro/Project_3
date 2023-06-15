@@ -1,0 +1,25 @@
+<main class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="login-form">
+        <h2 class="login-form__subtitle">Login</h2>
+          <p class="login-form__info-container">Please complete your details.</p>
+        <form [formGroup]="loginForm" (submit)="onSubmit()" class="login-form__form">
+          <div class="mb-2">
+            <label for="email" class="form-label login-form__label">Email:</label>
+            <input type="email" id="email" name="email" formControlName="email" required class="form-control login-form__input">
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label login-form__label">Password:</label>
+            <input type="password" id="password" name="password" formControlName="password" autocomplete="password" required class="form-control login-form__input">
+          </div>
+          <div class="mb-4 mt-4 login-form__buttons-container">
+            <button class="btn btn-secondary login-form__submit-button" type="submit" [disabled]="loginForm.invalid">Login</button>
+          </div>
+          <p>Don't have an account?</p>
+          <span><a class="nav-link" href="./signup">SignUp!</a></span>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

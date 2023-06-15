@@ -1,0 +1,20 @@
+.nav {
+  padding-top: 1rem;
+
+  &__item {
+    color: white;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.nav__item.active {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-link {
+  cursor: pointer;
+}
